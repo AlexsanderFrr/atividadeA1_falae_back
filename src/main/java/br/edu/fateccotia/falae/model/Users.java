@@ -1,14 +1,15 @@
 package br.edu.fateccotia.falae.model;
 
-import org.springframework.data.annotation.Id;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Users")
+@Table(name="user")
 public class Users {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
