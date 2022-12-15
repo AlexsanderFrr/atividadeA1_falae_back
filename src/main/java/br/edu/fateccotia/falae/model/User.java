@@ -1,7 +1,5 @@
 package br.edu.fateccotia.falae.model;
 
-
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,8 +7,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="user")
-public class Users {
+@Table(name="users")
+public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
@@ -18,11 +16,11 @@ public class Users {
 	private String nickName;
 	private String email;
 	private String password;
-	public Users() {
+	public User() {
 
     }
 
-    public Users(Integer id, String email, String password, String nickname) {
+    public User(Integer id, String email, String password, String nickname) {
         super();
         this.id = id;
         this.email = email;

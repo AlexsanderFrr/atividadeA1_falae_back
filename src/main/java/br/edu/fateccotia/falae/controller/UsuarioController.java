@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.edu.fateccotia.falae.model.Users;
+import br.edu.fateccotia.falae.model.User;
 import br.edu.fateccotia.falae.service.UsersService;
 
 
@@ -25,15 +25,15 @@ public class UsuarioController {
 	private UsersService usersService;
 	
 	@PostMapping
-	public ResponseEntity<Users> create(@RequestBody Users user){
-		Users created = usersService.save(user);
+	public ResponseEntity<User> create(@RequestBody User user){
+		User created = usersService.save(user);
 		return ResponseEntity.ok(created);
 		
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Users> find(@PathVariable(name ="id") Integer id){
-		Optional<Users> user = this.usersService.findById(id);
+	public ResponseEntity<User> find(@PathVariable(name ="id") Integer id){
+		Optional<User> user = this.usersService.findById(id);
 		if(user.isPresent()) {
 			return ResponseEntity.ok(user.get());
 		}else {
@@ -48,13 +48,13 @@ public class UsuarioController {
 //		if(userService.\findById(id).isPresent()) {
 //			created = u
 @PutMapping
-	public ResponseEntity<Users> recuperate(@RequestBody Users user){
-		Users created = usersService.save(user);
+	public ResponseEntity<User> recuperate(@RequestBody User user){
+		User created = usersService.save(user);
 		return ResponseEntity.ok(created);
 	}
 	
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Users> delete(@PathVariable("id") Integer id){
+	public ResponseEntity<User> delete(@PathVariable("id") Integer id){
 		
 		if(usersService.findById(id).isPresent()) {
 			usersService.delete(id);
