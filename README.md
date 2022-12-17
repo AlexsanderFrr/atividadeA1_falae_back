@@ -18,10 +18,6 @@ A aplicação consiste em interações entre usuários, onde os dados são colet
 - Spring Boot
 - JPA / Hibernate
 - Maven
-## Front end
-- HTML / CSS / JS / JQuery Ajax
-## Implantação em produção
-- Banco de dados: H2 Database
 
 # Como executar o projeto
 
@@ -38,18 +34,4 @@ cd atividadeA1_falae_back
 # executar o projeto
 importar projeto maven no eclipse e executar
 ```
------------------------------------------------------
 
-## Front end web
-Pré-requisitos: navegador
-
-```bash
-# clonar repositório
-git clone https://github.com/AlexsanderFrr/atividadeA1_falae_front.git
-
-# entrar na pasta do projeto front end web
-cd atividadeA1_falae_front
-
-# executar o projeto
-chmod +x index.html
-```
