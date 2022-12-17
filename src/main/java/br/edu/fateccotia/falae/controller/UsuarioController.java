@@ -1,5 +1,6 @@
 package br.edu.fateccotia.falae.controller;
 
+import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.edu.fateccotia.falae.model.User;
@@ -48,16 +48,15 @@ public class UsuarioController {
 		}
 	}
 	
-	@GetMapping("/validarSenha")	
-	public ResponseEntity<Boolean> validarSenha(@RequestParam String email,
-												@RequestParam String password){
+	@PostMapping("/validarSenha")	
+	public ResponseEntity<Boolean> validarSenha(@RequestBody Map <String, String> validar ){
 
-		Optional<User> optuser = usersService.findByEmail(email);
+		Optional<User> optuser = usersService.findByEmail(validar.get("email"));
 //		if (optuser.isEmpty()) {
 //			return ResponseEntity<Boolean>()
 //		}
 		
-		boolean valid = encoder.matches(password, optuser.get().getPassword());
+		boolean valid = encoder.matches(validar.get("password"), optuser.get().getPassword());
 		
 		HttpStatus status = (valid) ? HttpStatus.OK : HttpStatus.UNAUTHORIZED;
 		return ResponseEntity.status(status).body(valid);
