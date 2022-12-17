@@ -19,7 +19,7 @@ A aplicação consiste em interações entre usuários, onde os dados são colet
 - JPA / Hibernate
 - Maven
 ## Front end
-- HTML / CSS / JS 
+- HTML / CSS / JS / JQuery Ajax
 ## Implantação em produção
 - Banco de dados: H2 Database
 
@@ -33,25 +33,23 @@ Pré-requisitos: Java 11
 git clone https://github.com/AlexsanderFrr/atividadeA1_falae_back.git
 
 # entrar na pasta do projeto back end
-cd backend
+cd atividadeA1_falae_back
 
 # executar o projeto
-./mvnw spring-boot:run
+importar projeto maven no eclipse e executar
 ```
+-----------------------------------------------------
 
 ## Front end web
-Pré-requisitos: npm / yarn
+Pré-requisitos: navegador
 
 ```bash
 # clonar repositório
 git clone https://github.com/AlexsanderFrr/atividadeA1_falae_front.git
 
 # entrar na pasta do projeto front end web
-cd front-web
-
-# instalar dependências
-yarn install
+cd atividadeA1_falae_front
 
 # executar o projeto
-yarn start
+chmod +x index.html
 ```
