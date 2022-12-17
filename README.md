@@ -32,6 +32,6 @@ git clone https://github.com/AlexsanderFrr/atividadeA1_falae_back.git
 cd atividadeA1_falae_back
 
 # executar o projeto
-importar projeto maven no eclipse e executar
+importar projeto maven no eclipse e executar o arquivo FalaeApplication
 ```
 
