@@ -16,9 +16,6 @@ public class User {
 	private String nickName;
 	private String email;
 	private String password;
-	public User() {
-
-    }
 
     public User(Integer id, String email, String password, String nickname) {
         super();
