@@ -34,4 +34,16 @@ cd atividadeA1_falae_back
 # executar o projeto
 importar projeto maven no eclipse e executar o arquivo FalaeApplication
 ```
+## Front end web
+Pré-requisitos: navegador
 
+```bash
+# clonar repositório
+git clone https://github.com/AlexsanderFrr/atividadeA1_falae_front.git
+
+# entrar na pasta do projeto front end web
+cd atividadeA1_falae_front
+
+# executar o projeto
+chmod +x index.html
+```
